@@ -3,9 +3,9 @@ package com.example.mybehavior;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.appbar.AppBarLayout;
 
 /**
  * create by libo
@@ -20,11 +20,14 @@ public class MyBehavior extends CoordinatorLayout.Behavior<View> {
 
     @Override
     public boolean layoutDependsOn(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
-        return super.layoutDependsOn(parent, child, dependency);
+        return dependency instanceof AppBarLayout;  //让AppBarLayout为dependency
     }
 
     @Override
     public boolean onDependentViewChanged(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
-        return super.onDependentViewChanged(parent, child, dependency);
+        //获取依据的view的高度百分比
+        float heightRatio = dependency.getY()/dependency.getHeight();
+        child.setTranslationY(-child.getHeight()*heightRatio);
+        return true;
     }
 }

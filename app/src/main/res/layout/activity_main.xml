@@ -13,8 +13,8 @@
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -73,7 +73,8 @@
         android:layout_gravity="bottom"
         android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_behavior=".MyBehavior">
 
         <TextView
             android:layout_width="0dp"
