@@ -25,12 +25,44 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="1800dp"
-                android:background="@color/colorAccent"/>
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/pic1"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/pic2"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/pic1"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/pic2"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/pic1"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/pic2"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -39,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"
+        android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="horizontal">
 
